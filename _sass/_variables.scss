@@ -61,6 +61,9 @@ $twitter-color					      : #55acee;
 $vimeo-color					        : #1ab7ea;
 $youtube-color		            : #ff3333;
 
+$highlight-color              : #F95C3C;
+$button-shadow-color          : #777;
+
 
 /*
    Form variables
@@ -81,9 +84,9 @@ $form-font-size              	: $doc-font-size;
    ========================================================================== */
 
 $sliding-menu-border-color	 	 : $black;
-$sliding-menu-background 		   : $black;
+$sliding-menu-background 		   : $white;
 $sliding-menu-color 	 		     : $white;
-$sliding-menu-background-hover : $black;
+$sliding-menu-background-hover : $highlight-color;
 $sliding-menu-color-hover	 	   : $white;
 $sliding-menu-border   			   : 1px solid $sliding-menu-border-color;
 $button-size		         	     : 30px;

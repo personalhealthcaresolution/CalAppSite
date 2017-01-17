@@ -121,9 +121,11 @@
       width: $button-size;
     }
     &:before {
+      background: $highlight-color;
       transform: rotate3d(0,0,1,45deg);
     }
     &:after {
+      background: $highlight-color;
       transform: rotate3d(0,0,1,-45deg);
     }
   }

@@ -41,7 +41,10 @@
   }
   transition: $sliding-menu-animation;
   &.slide {
-    background: $danger-color;
+    background: $white;
+    border: $danger-color solid 3px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 3px $button-shadow-color;
     transform: translateX(0); /* don't slide close button on small screens only */
     @include media($medium) {
       transform: translateX(em(-600)); /* reset slide position */
@@ -62,6 +65,7 @@
   right: 0;
   padding: em(22) 0;
   visibility: hidden;
+  box-shadow: -1px 0px 15px $black;
   backface-visibility: hidden;
   text-align: left;
   @include size(100% 100%);
@@ -79,6 +83,7 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   &.is-visible {
+    box-shadow: -1px 0px 15px $black;
     visibility: visible;
     transform: translateX(0);
   }
@@ -87,13 +92,14 @@
     @include media($large) {
       margin-right: 20%;
     }
-    color: $white;
+    color: $highlight-color;
     @include font-size(14);
     @include media($small) {
       @include font-size(16);
     }
     span {
       display: block;
+      color: $black;
       @include font-size(32,no,1);
       @include media($small) {
         @include font-size(48,no,1);
@@ -125,41 +131,31 @@
   .menu-item {
     a {
       display: block;
-      color: $white;
       text-decoration: none;
+      border-left: 4px solid transparent;
     }
-    .teaser {
-      position: absolute;
-      left: 0;
-      margin-bottom: 0;
-      width: 50px;
-      border: 2px solid $white;
-      margin-bottom: ($gutter / 2);
-      opacity: 0.6;
-      @include media($small) {
-        width: 150px;
-      }
+    a:hover {
+      border-left-color: $highlight-color;
     }
     a:hover .teaser {
       opacity: 1;
     }
     .title {
       display: block;
-      margin-left: 60px;
+      margin-left: 30px;
       font-family: $alt-font;
+      color: $highlight-color;
       @include font-size(24,no);
       font-weight: 700;
       @include media($small) {
-        margin-left: 170px;
         @include font-size(32,no);
       }
     }
     .excerpt {
       margin-top: 0;
-      margin-left: 60px;
+      margin-left: 20px;
       @include font-size(14,no);
       @include media($small) {
-        margin-left: 170px;
         @include font-size(16,no);
       }
     }
