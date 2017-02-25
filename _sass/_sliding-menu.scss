@@ -36,6 +36,15 @@
   cursor: pointer;
   z-index: 20;
   box-sizing: border-box;
+  @include media($micro) {
+    background: transparent;
+    span {
+      background-color: $highlight-color;
+      &:before, &:after {
+        background-color: $highlight-color;
+      }
+    }
+  }
   &:hover {
     background: $black;
   }

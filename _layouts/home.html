@@ -38,7 +38,9 @@
       <div class="wrap page-lead-content">
         <h1>Skinny Bones</h1>
         <h2>Jump start your Jekyll site with something thin and light.</h2>
-        <a href="{{ site.url }}/getting-started/" class="btn-inverse">Start Using Skinny Bones</a> &nbsp; or &nbsp; <a href="https://github.com/mmistakes/skinny-bones-jekyll" class="btn-inverse">View on GitHub</a>
+        <a href="{{ site.url }}/getting-started/" class="btn-inverse">Start Using Skinny Bones</a>
+        <span>&nbsp; or &nbsp;</span>
+        <a href="https://github.com/mmistakes/skinny-bones-jekyll" class="btn-inverse">View on GitHub</a>
       </div><!-- /.page-lead-content -->
     </div><!-- /.page-lead -->
     {% endif %}
@@ -65,6 +67,10 @@
 
     <script src="{{ site.url }}/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="{{ site.url }}/js/main.js"></script>
+
+    {% if page.scrollHighlight == true %}
+      <script src="{{ site.url }}/js/scrolhighlight.js"></script>
+    {% endif %}
 
   </body>
 
